@@ -1,6 +1,6 @@
 # Text backup files
 *.bak
-*.replit
+
 # Database
 *.sqlite3
 
