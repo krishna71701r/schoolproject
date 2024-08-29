@@ -1,6 +1,7 @@
 # Text backup files
 *.bak
-
+*.env
+*.cnf
 # Database
 *.sqlite3
 
