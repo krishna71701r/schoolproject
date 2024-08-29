@@ -1,5 +1,4 @@
 from django.db import models
-sdsa
 # Create your models here.
 from django.urls import reverse # Used in get_absolute_url() to get URL for specified ID
 
