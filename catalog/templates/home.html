@@ -1,5 +1,8 @@
 {% extends "base_generic.html" %}
+{% block title %}
+<title>Home | Schoolibrary</title>
 
+{% endblock %}
 {% block content %}
   <h1>School Library Home</h1>
   <p>
@@ -13,5 +16,6 @@
     <li><strong>Copies:</strong> {{ num_instances }}</li>
     <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
     <li><strong>Authors:</strong> {{ num_authors }}</li>
+   
   </ul>
 {% endblock %}
