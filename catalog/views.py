@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Book,BookInstance,Author
 # Create your views here.
 
-def home(res):
+def home(request):
     """View function for home page of site."""
 
     # Generate counts of some of the main objects
