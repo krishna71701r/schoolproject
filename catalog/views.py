@@ -1,5 +1,12 @@
 from django.shortcuts import render
 from .models import Book,BookInstance,Author
+from django.views import generic
+
+
+
+
+
+
 # Create your views here.
 
 def home(request):
@@ -25,3 +32,17 @@ def home(request):
     # Render the HTML template home.html with the data in the context variable
     return render(request, 'home.html', context=context)
   
+#def book_detail_view(request, primary_key):
+#    try:
+#        book = Book.objects.get(pk=primary_key)
+#    except Book.DoesNotExist:
+#        raise Http404('Book does not exist')
+#
+#    return render(request, 'catalog/book_detail.html', context={'book': book})
+
+#alternative of functional view 
+class BookDetailView(generic.DetailView):
+    model = Book
+class AuthorDetailView(generic.DetailView):
+    model =  Author
+
