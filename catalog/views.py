@@ -49,3 +49,4 @@ class AuthorDetailView(generic.detail.DetailView):
 
 class BookListView(generic.list.ListView):
     model=Book
+    paginate_by = 15
