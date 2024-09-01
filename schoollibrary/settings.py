@@ -84,7 +84,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'schoollibrary.wsgi.application'
-
+#not for production ,only for testing  purpose. 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
