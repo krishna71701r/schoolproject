@@ -54,8 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
 ]
 
-# Only use clickjacking protection in deployments because the Development Web View uses 
-# iframes and needs to be a cross origin.
+
 
 
 ROOT_URLCONF = 'schoollibrary.urls'
