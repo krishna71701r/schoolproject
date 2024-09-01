@@ -5,10 +5,10 @@
 
   
   <!-- author detail link not yet defined -->
-  <p><strong>First Name:</strong> {{ author.first_name }}</p>
-  <p><strong>Last Name:</strong> {{ author.last_name }}</p>
-  <p><strong>Date Of Birth:</strong> {{ author.date_of_birth }}</p>
-  <p><strong>Date Of Death:</strong> {{ author.date_of_death }}</p>
+
+  
+  <p> {{ author.date_of_birth }} - {{ author.date_of_death }} </p>
+  
 
   <div style="margin-left:20px;margin-top:20px">
     <h4>Books</h4>
@@ -16,8 +16,8 @@
     <ol class="list">
     {% for book in author.book_set.all %}
     
-        <li class="item-1"><a class="link" href="{{ book.get_absolute_url }}">{{book.title}}</a></li>
-  
+        <li class="item-1"><a class="link" href="{{ book.get_absolute_url }}">{{book.title}}</a><strong>({{book.bookinstance_set.all.count}})</strong>
+        <p>{{book.summary|slice:":400"}}...</p></li>
 
     {% endfor %}
      </ol>
