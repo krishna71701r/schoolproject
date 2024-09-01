@@ -30,7 +30,7 @@ def home(request):
     }
 
     # Render the HTML template home.html with the data in the context variable
-    return render(request, 'home.html', context=context)
+    return render(request, 'catalog/home.html', context=context)
   
 #def book_detail_view(request, primary_key):
 #    try:
@@ -41,8 +41,11 @@ def home(request):
 #    return render(request, 'catalog/book_detail.html', context={'book': book})
 
 #alternative of functional view 
-class BookDetailView(generic.DetailView):
+
+class BookDetailView(generic.detail.DetailView):
     model = Book
-class AuthorDetailView(generic.DetailView):
+class AuthorDetailView(generic.detail.DetailView):
     model =  Author
 
+class BookListView(generic.list.ListView):
+    model=Book
