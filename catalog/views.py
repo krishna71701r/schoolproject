@@ -21,12 +21,15 @@ def home(request):
 
     # The 'all()' is implied by default.
     num_authors = Author.objects.count()
-
+    num_visits = request.session.get('num_visits', 0)
+    num_visits += 1
+    request.session['num_visits']=num_visits
     context = {
         'num_books': num_books,
         'num_instances': num_instances,
         'num_instances_available': num_instances_available,
         'num_authors': num_authors,
+        'num_visits':num_visits
     }
 
     # Render the HTML template home.html with the data in the context variable
@@ -50,3 +53,7 @@ class AuthorDetailView(generic.detail.DetailView):
 class BookListView(generic.list.ListView):
     model=Book
     paginate_by = 15
+
+class AuthorListView(generic.list.ListView):
+    model=Author
+    paginate_by=15
