@@ -5,13 +5,17 @@
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
-
+{% url 'home' as h %}
+{% url 'books' as b %}
+{% url 'authors' as a %}
   {% if next %}
     {% if user.is_authenticated %}
       <p>Your account doesn't have access to this page. To proceed,
       please login with an account that has access.</p>
     {% else %}
+       {% if next not in h and next not in b and next not in a%}
       <p>Please login to see this page.</p>
+        {% endif %}
     {% endif %}
   {% endif %}
 
@@ -27,7 +31,7 @@
         <td>{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login">
+    <input class="btn btn-primary" type="submit" value="login">
     <input type="hidden" name="next" value="{{ next }}">
   </form>
 

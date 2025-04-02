@@ -1,5 +1,9 @@
 from django.contrib import admin
 
+
+# title 
+admin.site.site_header='Schoollibrary Administration'
+admin.site.site_title='Schoollibrary'
 # Register your models here.
 from .models import Author, Genre, Book, BookInstance, Language
 class BooksInstanceInline(admin.TabularInline):
@@ -17,13 +21,13 @@ class BookAdmin(admin.ModelAdmin):
     inlines=[BooksInstanceInline,]
 class BookInstanceAdmin(admin.ModelAdmin):
     list_filter = ('status', 'due_back')
-    list_display =('id','status', 'due_back','imprint')
+    list_display =('id','status','borrower' ,'due_back','imprint')
     fieldsets = (
         (None, {
             'fields': ('book', 'imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back')
+            'fields': ('status', 'due_back','borrower')
         }),
     )
 

@@ -10,10 +10,12 @@
     padding-bottom:20px;
   }
   .main-url{
-    text-decoration: none;
-    color: white;
+  
+
     font-weight: 500;
+    color: #ECF0F1;
     letter-spacing: 1px;
+    text-decoration:  none;
    
   }
   .row{
@@ -22,7 +24,7 @@
     overflow: hidden;
   }
   #nav-col {
-    background-color: #414955;
+    background-color: #050505;
     overflow-y: auto;
     max-height: 100vh;
     height: 100vh;
@@ -34,7 +36,7 @@
 #main-col{
   overflow-y: auto;
   max-height: 100vh;
-  padding-left:150px ;
+  
   padding-top: 30px;
 }
 #main-col::-webkit-scrollbar{
@@ -64,3 +66,107 @@ body{
 .list {
 
 }
+
+/* Sidebar background color */
+.navbar {
+  
+}
+
+/* Sidebar link color */
+.nav-link {
+  
+}
+
+/* Active and hover link color */
+.main-url:hover, .main-url.active {
+  color: #3498DB;
+}
+
+a{
+  
+}
+
+
+.btn-secondary{
+  background-color: #bcdb3400;
+  border-radius: 10px ;
+  margin-top: 10px;
+
+}
+.btn-secondary:hover{
+  
+  background-color: rgb(13, 110, 253); 
+}
+
+.btn-primary{
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 16px;
+
+}
+form *{
+  margin-top:15px;
+  
+ 
+}
+
+form{
+  margin:15px; 
+}
+body {
+  background: linear-gradient(220deg, #67e9fa, #4ef177);
+}
+input {
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  border: 2px solid rgba(255, 255, 255, 0.6); /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px;
+ 
+  font-size: 16px;
+  width: 200px;
+  
+  backdrop-filter: blur(8px); /* Optional for modern browsers */
+}
+textarea{
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px;
+  
+  font-size: 16px;
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  backdrop-filter: blur(8px); /* Apply blur to the background */
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+}
+select {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px;
+  
+  font-size: 16px;
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  backdrop-filter: blur(8px); /* Apply blur to the background */
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+}
+#glass{
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px;
+  padding-left: 50px;
+  margin-right: 50px; 
+  margin-left: 50px;
+
+
+
+  margin-bottom:50px;
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  backdrop-filter: blur(8px); /* Apply blur to the background */
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+}
+.text-warning{
+  color:#3498DB ;
+}
+
+

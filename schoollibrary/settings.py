@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Add our new application
-    'catalog.apps.CatalogConfig', # This object was created for us in /catalog/apps.py
+    'catalog.apps.CatalogConfig',
+     'bootstrap5', # This object was created for us in /catalog/apps.py
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
